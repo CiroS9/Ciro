@@ -396,4 +396,22 @@ h1{
 @media (prefers-reduced-motion: reduce){
   .reveal{ transition: none; }
   .btn:hover{ transform:none; }
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background-image: url("./assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: center 120px;
+  background-size: 420px;
+  opacity: 0.02;
+  filter: grayscale(1) blur(0.5px);
+  pointer-events: none;
+  z-index: 0;
+}
 
+/* Contenuto sempre sopra */
+header, section, footer{
+  position: relative;
+  z-index: 1;
+}
