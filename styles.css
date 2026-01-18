@@ -409,9 +409,25 @@ body::before{
   pointer-events: none;
   z-index: 0;
 }
-
-/* Contenuto sempre sopra */
 header, section, footer{
   position: relative;
   z-index: 1;
+}
+html body::before{
+  content:"" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  background-image: url("./assets/logo.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center 120px !important;
+  background-size: 380px !important;
+  opacity: 0.012 !important;
+  filter: grayscale(1) blur(0.7px) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+html header, html section, html footer{
+  position: relative !important;
+  z-index: 1 !important;
 }
