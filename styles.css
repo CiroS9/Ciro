@@ -397,3 +397,7 @@ h1{
   .reveal{ transition: none; }
   .btn:hover{ transform:none; }
 }
+.brand-logo{
+  height: 64px;
+  width: auto;
+}
