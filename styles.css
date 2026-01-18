@@ -385,17 +385,19 @@ h1{
   .btn:hover{ transform:none; }
 }
 
-/* WATERMARK LOGO (discreto, non invasivo) */
+
+/* WATERMARK LOGO (molto discreto, fisso) */
 body::before{
   content: "";
   position: fixed;
   inset: 0;
   background-image: url("./assets/logo.png");
   background-repeat: no-repeat;
-  background-position: center 120px;
-  background-size: 420px;
-  opacity: 0.012;
-  filter: grayscale(1) blur(0.8px);
+  background-position: center 22vh;
+  background-size: 280px;
+  opacity: 0.006; /* super leggero */
+  filter: grayscale(1) blur(1.2px) contrast(.9) brightness(.85);
+  mix-blend-mode: soft-light;
   pointer-events: none;
   z-index: 0;
 }
